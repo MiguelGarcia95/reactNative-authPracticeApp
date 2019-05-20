@@ -7,8 +7,9 @@ class Home extends Component {
 
   checkLogin = () => {
     const {username, password} = this.state;
-    console.log(username);
-    console.log(password);
+    if (username === 'admin' && password === 'admin') {
+      console.warn('login success');
+    }
   }
 
   render() {
@@ -17,9 +18,9 @@ class Home extends Component {
       <View style={parent}>
         <Text style={heading}>Login into the Application.</Text>
         <TextInput style={input}  placeholder='Username' onChangeText={text => this.setState({username: text})} />
-        <TextInput style={input} secureTextEntry={true} placeholder='Password' />
+        <TextInput style={input} secureTextEntry={true} placeholder='Password' onChangeText={text => this.setState({password: text})} />
 
-        <Button style={button} title={'Login'} onPress={this.checkLogin} />
+        <Button style={button} title={'Login'} onPress={_ => this.checkLogin()} />
       </View>
     )
   }
