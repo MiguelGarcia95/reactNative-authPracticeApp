@@ -4,11 +4,11 @@ import Dashboard from './src/components/Dashboard';
 
 const AppNavigator = createStackNavigator(
   {
-    home: Home,
-    dashboard: Dashboard,
+    Home: Home,
+    Dashboard: Dashboard,
   },
   {
-    initialRouteName: "home"
+    initialRouteName: "Home"
   }
 );
 

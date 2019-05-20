@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, TextInput, Button } from 'react-native'
+import { Text, View, TextInput, Button, Alert } from 'react-native'
 import styles from './styles';
 
 class Home extends Component {
@@ -9,8 +9,12 @@ class Home extends Component {
     const {username, password} = this.state;
     if (username === 'admin' && password === 'admin') {
       //redirect to dashboard
+      this.props.navigation.navigate('Dashboard')
     } else {
       // display error
+      Alert.alert('Error', 'Username/Password Mismatch', [{
+        text: 'Okay'
+      }])
     }
   }
 
