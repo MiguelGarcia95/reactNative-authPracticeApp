@@ -8,7 +8,9 @@ class Home extends Component {
   checkLogin = () => {
     const {username, password} = this.state;
     if (username === 'admin' && password === 'admin') {
-      console.warn('login success');
+      //redirect to dashboard
+    } else {
+      // display error
     }
   }
 
