@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { Text, View, TextInput } from 'react-native'
+import styles from './styles';
 
 class Home extends Component {
   render() {
+    const {heading, input} = styles;
     return (
       <View>
-        <Text>Login into the Application.</Text>
-        <TextInput />
-        <TextInput />
+        <Text style={heading}>Login into the Application.</Text>
+        <TextInput style={input} />
+        <TextInput style={input} />
       </View>
     )
   }
