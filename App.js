@@ -1,13 +1,14 @@
-import React, {Component} from 'react';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import Home from './src/components/Home';
+import Dashboard from './src/components/Dashboard';
 
 const AppNavigator = createStackNavigator(
   {
-    Home: Home,
+    home: Home,
+    dashboard: Dashboard,
   },
   {
-    initialRouteName: "Home"
+    initialRouteName: "home"
   }
 );
 
