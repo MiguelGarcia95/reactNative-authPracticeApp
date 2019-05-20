@@ -54,6 +54,5 @@ const AppNavigator = createStackNavigator(
     initialRouteName: "Home"
   }
 );
- 
 
 export default createAppContainer(AppNavigator);
