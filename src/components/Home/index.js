@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, TextInput } from 'react-native'
 
 class Home extends Component {
   render() {
     return (
       <View>
-        <Text> textInComponent </Text>
+        <Text>Login into the Application.</Text>
+        <TextInput />
+        <TextInput />
       </View>
     )
   }
