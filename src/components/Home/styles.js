@@ -9,8 +9,11 @@ export default StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     marginTop: 20,
-    borderColor: 'rgba(0,0,0,0.3)',
+    borderColor: '#232323',
     borderRadius: 5,
-    borderWidth: 0.5
+    borderWidth: 0.2
+  },
+  button: {
+    backgroundColor: '#232323'
   }
 }) 
