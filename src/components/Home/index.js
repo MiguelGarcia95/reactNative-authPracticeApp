@@ -9,7 +9,7 @@ class Home extends Component {
       <View>
         <Text style={heading}>Login into the Application.</Text>
         <TextInput style={input} />
-        <TextInput style={input} />
+        <TextInput style={input} secureTextEntry={true} />
       </View>
     )
   }
