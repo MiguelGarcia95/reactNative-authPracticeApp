@@ -7,6 +7,10 @@ export default StyleSheet.create({
   },
   input: {
     marginLeft: 20,
-    marginRight: 20
+    marginRight: 20,
+    marginTop: 20,
+    borderColor: 'rgba(0,0,0,0.3)',
+    borderRadius: 5,
+    borderWidth: 0.5
   }
-})
+}) 
