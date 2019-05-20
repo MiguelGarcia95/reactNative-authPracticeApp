@@ -5,13 +5,15 @@ import styles from './styles';
 class Home extends Component {
   state = {username: '', password: ''}
 
+  static navigationOptions = {
+    header: null
+  }
+
   checkLogin = () => {
     const {username, password} = this.state;
     if (username === 'admin' && password === 'admin') {
-      //redirect to dashboard
       this.props.navigation.navigate('Dashboard')
     } else {
-      // display error
       Alert.alert('Error', 'Username/Password Mismatch', [{
         text: 'Okay'
       }])
