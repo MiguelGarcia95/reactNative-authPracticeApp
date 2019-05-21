@@ -11,7 +11,12 @@ class Home extends Component {
 
   checkLogin = () => {
     const {username, password} = this.state;
+    // here it's authenticated. It could be done with php, or any other backend. even firebase
     if (username === 'admin' && password === 'admin') {
+      fetch('http:localhost:9000', {method: 'POST', body: JSON.stringify({username,password})})
+      .then(res => {
+        return res.text()
+      }).then(res => console.warn(res))
       this.props.navigation.navigate('Dashboard')
     } else {
       Alert.alert('Error', 'Username/Password Mismatch', [{
