@@ -12,17 +12,19 @@ class Home extends Component {
   checkLogin = () => {
     const {username, password} = this.state;
     // here it's authenticated. It could be done with php, or any other backend. even firebase
-    fetch('http:localhost:9000', {method: 'POST', body: JSON.stringify({username,password})})
+    fetch(`http:localhost:9000/?username=${username}&password=${password}`)
       .then(res => {
-        return res.text()
+        console.warn(res); 
+        return res
       }).then(res => {
-        if (res === '1') {
-          this.props.navigation.navigate('Dashboard')
-        } else {
-          Alert.alert('Error', 'Username/Password mismatch', [{
-            text: 'Okay'
-          }])
-        }
+
+        // if (res === '1') {
+        //   this.props.navigation.navigate('Dashboard')
+        // } else {
+        //   Alert.alert('Error', 'Username/Password mismatch', [{
+        //     text: 'Okay'
+        //   }])
+        // }
       })
   }
 
